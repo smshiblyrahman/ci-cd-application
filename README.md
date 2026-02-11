@@ -1,4 +1,4 @@
-# project6 — NestJS + Docker + GitHub Actions CI/CD
+# NestJS + Docker + GitHub Actions CI/CD
 
 This repository contains a minimal **NestJS** HTTP API that is ready to be containerized and deployed using the workflow described in `cicd_pipeline_guide.md`.
 
