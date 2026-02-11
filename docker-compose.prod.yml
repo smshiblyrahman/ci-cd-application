@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  app:
+    image: ${DOCKER_IMAGE:-your-dockerhub-username/project6}:${IMAGE_TAG:-latest}
+    restart: always
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    env_file:
+      - .env.production
+    networks:
+      - web
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  web:
+    external: false
+
